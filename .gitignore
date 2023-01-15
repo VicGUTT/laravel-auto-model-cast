@@ -1,0 +1,27 @@
+*.log
+*.local
+*.vic
+.env
+.env.production
+.env.staging
+.env.backup
+.phpunit.result.cache
+.npmrc
+auth.json
+/.vic
+/.idea
+/.vscode
+/.fleet
+/.results
+/.coverage
+/.temp
+/node_modules
+# /public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/resources/tests/vitest/.coverage
+/resources/tests/playwright/.test-results
+/playwright-report/
+/playwright/.cache/

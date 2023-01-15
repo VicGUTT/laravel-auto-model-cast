@@ -1,0 +1,78 @@
+{
+    "name": "vicgutt/laravel-auto-model-cast",
+    "description": "Automatically cast model attributes based on database columns",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "database",
+        "casting",
+        "model",
+        "eloquent"
+    ],
+    "homepage": "https://github.com/vicgutt/laravel-auto-model-cast",
+    "authors": [
+        {
+            "name": "Victor GUTT",
+            "email": "guttvictor@yahoo.fr",
+            "homepage": "https://victorgutt.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^9.0",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "vicgutt/laravel-inspect-db": "^0.1.2",
+        "vicgutt/laravel-models-finder": "^0.1.0",
+        "vicgutt/php-enhanced-enum": "^0.1.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "VicGutt\\AutoModelCast\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VicGutt\\AutoModelCast\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=1G",
+        "lint": "composer analyse",
+        "test": "vendor/bin/pest",
+        "test:coverage": "vendor/bin/pest --coverage --min=90",
+        "test:[filtered]": "vendor/bin/pest --filter=CastsTest",
+        "format": "vendor/bin/pint --test",
+        "format:fix": "vendor/bin/pint",
+        "fix": "composer format:fix"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VicGutt\\AutoModelCast\\AutoModelCastServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

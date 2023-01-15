@@ -1,0 +1,23 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    # The level 9 is the highest level
+    level: 9
+
+    paths:
+        - src
+        - config
+
+    # ignoreErrors:
+    #     - '#PHPDoc tag @var#'
+
+    # excludePaths:
+    #     - ./*/*/FileToBeExcluded.php
+
+    tmpDir: .results/phpstan
+
+    checkModelProperties: true
+    checkOctaneCompatibility: true
+    checkMissingIterableValueType: false
+
