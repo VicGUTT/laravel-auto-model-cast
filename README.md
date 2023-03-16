@@ -41,7 +41,7 @@ Here's the steps taken:
 
 > **Note**
 >
-> Please take a look at the "[Caveats](#caveats)" section at the end of the documentation.
+> Please take a look at the "[Gotchas](#gotchas)" section at the end of the documentation.
 
 ### Caching
 
@@ -265,7 +265,7 @@ The returned array will have the model's attribute names as keys and the cast ty
 > Under the hood the helper methods make use of the config file.
 > The methods can therefore only be used after the config file has been set up.
 
-## Caveats
+## Gotchas
 
 ### Column types dependent on the database platform
 
